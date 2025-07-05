@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <p id="intro" class="intro">
+      Here's a virtual cake because you're very against me spending money TuT<br>
+      <strong>but if you want a real one, YOU CAN STILL ASK ♥︎</strong>
+    </p>
+
+    <div class="cake">
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button id="startBtn" onclick="startSequence()">Start</button>
+      <button id="restartBtn" onclick="reset()" style="display:none;">Again?</button>
+    </div>
+
+    <div id="countdown"></div>
+    <div id="message"></div>
+
+    <canvas id="fireworks"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
