@@ -69,7 +69,7 @@ function reset() {
 
 function launchFireworks() {
   canvas.style.opacity = 1;
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 20; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height / 2;
     const color = `hsl(${Math.random() * 360}, 60%, 85%)`;
@@ -79,7 +79,7 @@ function launchFireworks() {
 
 function drawBurst(x, y, color) {
   const radius = 2 + Math.random() * 4;
-  const particles = 25;
+  const particles = 10;
   for (let i = 0; i < particles; i++) {
     const angle = Math.random() * 2 * Math.PI;
     const speed = Math.random() * 4 + 2;
@@ -94,8 +94,6 @@ function animateParticle(x, y, vx, vy, color, radius) {
   const fade = 0.02;
   function frame() {
     if (alpha <= 0) return;
-    ctx.fillStyle = `rgba(31,16,37,0.15)`;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, Math.PI * 2);
     ctx.fillStyle = color;
